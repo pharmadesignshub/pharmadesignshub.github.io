@@ -1,29 +1,34 @@
 document.addEventListener("DOMContentLoaded", () => {
   const flipbook = document.getElementById('flipbook');
 
-  // Fetch portfolio.json
-  fetch('portfolio.json')
-    .then(response => response.json())
-    .then(data => {
-      const images = data.images;
-      if (flipbook && typeof $ !== "undefined" && $(flipbook).turn) {
-        // Add each image as a page
-        images.forEach(img => {
+  if (!flipbook || typeof $ === "undefined" || !$(flipbook).turn) return;
+
+  // Replace with your GitHub username and repository
+  const repoUser = "pharmadesignshub";
+  const repoName = "pharmadesignshub.gethub.io";
+  const folderPath = "assets/portfolio";
+
+  const apiURL = `https://api.github.com/repos/${repoUser}/${repoName}/contents/${folderPath}`;
+
+  fetch(apiURL)
+    .then(res => res.json())
+    .then(files => {
+      files.forEach(file => {
+        if (file.name.match(/\.(jpg|jpeg|png|gif)$/i)) {
           const page = document.createElement('div');
           const image = document.createElement('img');
-          image.src = img;
+          image.src = file.download_url;
           image.alt = "Portfolio page";
           page.appendChild(image);
           flipbook.appendChild(page);
-        });
+        }
+      });
 
-        // Initialize Turn.js
-        $(flipbook).turn({
-          width: 800,
-          height: 400,
-          autoCenter: true
-        });
-      }
+      $(flipbook).turn({
+        width: 800,
+        height: 400,
+        autoCenter: true
+      });
     })
-    .catch(err => console.error("Error loading portfolio.json:", err));
+    .catch(err => console.error("Error fetching portfolio images:", err));
 });
