@@ -1,63 +1,49 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PHARMADESIGNSHUB</title>
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | PDH – Pharma Design’s Hub</title>
+  <link href="style.css" rel="stylesheet">
 </head>
 <body>
-
-<header>
-  <div class="container">
-    <h2>PHARMADESIGNSHUB</h2>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="careers.html">Careers</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+<header class="site-header">
+  <div class="container nav-wrapper">
+    <a class="brand" href="index.html"><img src="assets/logo.png" class="logo"><span class="brand-text">PDH</span></a>
+    <button class="hamburger"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
+    <nav class="nav">
+      <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="careers.html">Careers</a><a href="contact.html">Contact</a>
     </nav>
   </div>
 </header>
 
 <section class="hero">
-  <div>
-    <h1>PHARMADESIGNSHUB</h1>
-    <p>Your Creative Partner in Pharma Business</p>
-    <a href="services.html" class="btn">Explore Our Services</a>
+  <img src="assets/logo.png" alt="PDH logo" class="hero-logo">
+  <h1>Freelance Design Services for Pharma & Beyond</h1>
+  <p>Premium branding, packaging, and marketing creatives tailored for the healthcare industry.</p>
+  <div class="hero-actions">
+    <a class="btn btn-light" href="about.html">Explore</a>
+    <a class="btn btn-outline" href="services.html">Our Services</a>
   </div>
 </section>
 
-<section id="services">
-  <h2>Our Services</h2>
-  <div class="services-grid container">
-    <div class="service-card"><h3>Logo & Branding</h3><p>Creative branding solutions for your pharma business.</p></div>
-    <div class="service-card"><h3>Printing Services</h3><p>High-quality printing for packaging and promotional material.</p></div>
-    <div class="service-card"><h3>Packaging Design</h3><p>Custom packaging design that stands out.</p></div>
-    <div class="service-card"><h3>Digital Marketing Assets</h3><p>Graphics and visuals for social media & digital campaigns.</p></div>
+<section class="strip">
+  <div class="container strip-grid">
+    <div class="strip-card"><h3>Branding</h3><p>Logos, visual identity, and brand systems that stand out.</p></div>
+    <div class="strip-card"><h3>Packaging</h3><p>User-centered pharmaceutical & healthcare packaging design.</p></div>
+    <div class="strip-card"><h3>Marketing</h3><p>Campaign assets, brochures, and digital creatives that convert.</p></div>
   </div>
 </section>
 
-<section id="portfolio">
-  <h2>Our Portfolio</h2>
-  <div class="gallery container">
-    <!-- Images from uploads folder -->
-    <?php
-    $images = glob("uploads/*.{jpg,jpeg,png,gif}", GLOB_BRACE);
-    foreach($images as $img){
-        echo '<img src="'.$img.'" alt="Portfolio">';
-    }
-    ?>
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div><h4>Pharma Design’s Hub</h4><p>Creative solutions for pharma & beyond.</p></div>
+    <div><h4>Contact</h4><ul><li>Email: hello@pdh-designs.com</li><li><strong>Kuldeep – Managing Director</strong></li></ul></div>
+    <div><h4>Links</h4><ul><li><a href="services.html">Services</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="careers.html">Careers</a></li></ul></div>
   </div>
-</section>
-
-<footer>
-  <p>&copy; 2025 PHARMADESIGNSHUB | Email: pharmadesignshub@gmail.com | Phone: 8278473450</p>
+  <div class="footer-bottom"><p>© <span id="year"></span> PDH. All rights reserved.</p></div>
 </footer>
-
+<script src="main.js"></script>
 </body>
 </html>
