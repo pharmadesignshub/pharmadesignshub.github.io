@@ -1,54 +1,113 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
+:root{
+  --brand:#1976d2;   /* PDH blue */
+  --ink:#0f172a;     /* dark text */
+  --muted:#64748b;   /* gray text */
+  --bg:#ffffff;
+  --alt:#f5f7fb;     /* soft section bg */
+  --card:#ffffff;
+  --ring: rgba(25,118,210,.25);
 }
-.container {
-  width: 90%;
-  max-width: 1100px;
-  margin: auto;
-  overflow: hidden;
-  padding: 20px 0;
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color:var(--ink);
+  background:var(--bg);
+  line-height:1.6;
 }
-header {
-  background: #222;
-  color: #fff;
-  padding: 10px 0;
+a{color:var(--brand);text-decoration:none}
+img{max-width:100%;display:block}
+
+.container{width:min(1100px,92%);margin:auto}
+
+.site-header{
+  position:sticky; top:0; z-index:10;
+  background:#fff; border-bottom:1px solid #eaeef5;
 }
-header h1 {
-  margin: 0;
+.nav{
+  display:flex; align-items:center; justify-content:space-between; gap:16px;
+  padding:12px 0;
 }
-header nav a {
-  color: #fff;
-  margin: 0 10px;
-  text-decoration: none;
+.brand{display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:.5px; color:var(--ink)}
+.logo{width:40px;height:40px;border-radius:50%;object-fit:cover}
+.menu{display:flex; align-items:center; gap:18px}
+.menu a{font-weight:600; color:var(--ink)}
+.menu .btn.small{padding:.5rem .8rem; font-size:.9rem}
+
+.hero{
+  background: radial-gradient(1200px 500px at 10% -10%, rgba(25,118,210,.12), transparent),
+              radial-gradient(1200px 500px at 90% 10%, rgba(25,118,210,.10), transparent);
+  padding:72px 0 64px;
+  text-align:center;
 }
-#hero {
-  background: #4CAF50;
-  color: #fff;
-  padding: 60px 0;
-  text-align: center;
+.hero h1{font-size:clamp(28px,4vw,44px); line-height:1.15; margin:0 0 10px}
+.hero p{color:var(--muted); font-size:1.1rem; margin:0 0 22px}
+.cta-row{display:flex; gap:12px; justify-content:center; flex-wrap:wrap}
+
+.btn{
+  display:inline-block; border:2px solid var(--brand); background:var(--brand); color:#fff;
+  padding:.8rem 1.2rem; border-radius:999px; font-weight:700; transition:.2s;
 }
-section h2 {
-  text-align: center;
-  margin-bottom: 20px;
+.btn:hover{transform:translateY(-1px)}
+.btn.outline{background:transparent; color:var(--brand)}
+.btn.small{padding:.45rem .9rem}
+
+.section{padding:64px 0}
+.section.alt{background:var(--alt)}
+.section-title{
+  text-align:center; margin:0 0 26px; font-size:clamp(22px,3.2vw,32px)
 }
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
+.muted{color:var(--muted)}
+.center{text-align:center}
+
+.grid{
+  display:grid; gap:18px;
 }
-.card {
-  background: #f4f4f4;
-  padding: 20px;
-  text-align: center;
-  border-radius: 5px;
+.grid.three{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.grid.four{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+
+.card{
+  background:var(--card); border:1px solid #e6ebf3; border-radius:16px; padding:20px;
+  box-shadow:0 1px 0 rgba(2,6,23,.04);
 }
-footer {
-  background: #222;
-  color: #fff;
-  text-align: center;
-  padding: 10px 0;
-  margin-top: 20px;
+.card h3{margin:0 0 6px}
+.card p{margin:0; color:var(--muted)}
+
+.gallery .shot{
+  overflow:hidden; border-radius:16px; background:#fff; border:1px solid #e6ebf3
+}
+.gallery img{width:100%; height:220px; object-fit:cover}
+.gallery figcaption{padding:10px 12px; font-weight:600}
+
+.about{display:grid; gap:24px}
+.ticks{padding-left:18px}
+.ticks li{margin:6px 0}
+
+.contact-wrap{
+  display:grid; gap:18px; grid-template-columns:1.1fr 1fr;
+}
+.contact-card{
+  background:#fff; border:1px solid #e6ebf3; border-radius:16px; padding:20px
+}
+.contact-form{
+  background:#fff; border:1px solid #e6ebf3; border-radius:16px; padding:20px;
+}
+.contact-form label{display:block; font-weight:600; margin:8px 0 6px}
+.contact-form input,.contact-form textarea{
+  width:100%; padding:.8rem .9rem; border-radius:12px; border:1px solid #d6deea; outline:0;
+}
+.contact-form input:focus,.contact-form textarea:focus{box-shadow:0 0 0 4px var(--ring); border-color:var(--brand)}
+.contact-form button{margin-top:10px}
+
+.site-footer{border-top:1px solid #eaeef5; background:#fff}
+.foot{display:flex; align-items:center; justify-content:space-between; gap:12px; padding:18px 0}
+.top{font-weight:700}
+
+/* Responsive tweaks */
+@media (max-width:880px){
+  .contact-wrap{grid-template-columns:1fr}
+}
+@media (max-width:720px){
+  .menu a:not(.btn){display:none}
 }
