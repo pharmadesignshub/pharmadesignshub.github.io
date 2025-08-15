@@ -88,7 +88,7 @@ body {
 
 /* Hero Sections */
 .hero {
-  height: 60vh; /* shorter height */
+  height: 40vh; /* shorter height */
   display: flex;
   flex-direction: column;
   align-items: center;
