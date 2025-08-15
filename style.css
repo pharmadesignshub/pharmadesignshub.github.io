@@ -46,6 +46,10 @@ body {
   display: block;
 }
 
+.logo {
+  max-width: 200px; /* adjust as needed */
+}
+
 .brand {
   display: flex;
   align-items: center;
