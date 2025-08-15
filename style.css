@@ -34,15 +34,15 @@ body {
 
 .nav-wrapper {
   display: flex;
-flex-wrap: wrap;
-  justify-content: space-between;
   align-items: center;
-  padding: 1rem 0;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
 }
 
 .logo {
-  height: 50px;
-  margin-right: 10px;
+  max-width: 120px;
+  width: 50%;
+  height: auto;
 }
 
 .brand {
