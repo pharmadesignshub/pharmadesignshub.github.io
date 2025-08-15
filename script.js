@@ -1,23 +1,15 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const flipbook = document.getElementById('flipbook');
-    const totalPages = 5; // Number of images in assets/portfolio
+$(document).ready(function() {
+    const totalPages = 5; // Update this if you add/remove images
+    const flipbook = $('#flipbook');
 
-    flipbook.innerHTML = ""; // Clear any existing content
-
-    // Add images as pages
     for (let i = 1; i <= totalPages; i++) {
-        const page = document.createElement('div');
-        const img = document.createElement('img');
-        img.src = `assets/portfolio/page${i}.jpg`; // Ensure images are named page1.jpg, page2.jpg...
-        img.alt = `Portfolio Page ${i}`;
-        img.style.width = "100%";
-        img.style.height = "100%";
-        page.appendChild(img);
-        flipbook.appendChild(page);
+        const page = $('<div class="page"></div>');
+        const img = $('<img>').attr('src', `assets/portfolio/page${i}.jpg`).attr('alt', `Page ${i}`);
+        page.append(img);
+        flipbook.append(page);
     }
 
-    // Initialize turn.js
-    $('#flipbook').turn({
+    flipbook.turn({
         width: 800,
         height: 400,
         autoCenter: true,
