@@ -1,12 +1,149 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pharma Designs Hub</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PHARMA DESIGNS HUB — Freelance Design Services</title>
+  <meta name="description" content="PHARMADESIGNSHUB provides creative pharma branding, packaging, and print design services." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <h1>Welcome to Pharma Designs Hub</h1>
-    <p>Website under construction...</p>
+  <!-- Header / Nav -->
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#home">
+        <img src="assets/logo.png" alt="PDH Logo" class="logo" />
+        <span>PHARMA DESIGNS HUB</span>
+      </a>
+      <nav class="menu">
+        <a href="#services">Services</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#about">About</a>
+        <a class="btn small" href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="hero">
+    <div class="container hero-content">
+      <h1>Freelance Design Services for Pharma Brands</h1>
+      <p>Design • Printing • Packaging • Branding</p>
+      <div class="cta-row">
+        <a class="btn" href="#portfolio">View Work</a>
+        <a class="btn outline" href="#contact">Get a Quote</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="section">
+    <div class="container">
+      <h2 class="section-title">Services</h2>
+      <div class="grid three">
+        <div class="card">
+          <h3>Brand Identity</h3>
+          <p>Logos, color systems, typography, and brand guides tailored for pharma & healthcare.</p>
+        </div>
+        <div class="card">
+          <h3>Packaging & Labels</h3>
+          <p>Regulatory-friendly carton/label layouts, blister packs, bottles, and sachets.</p>
+        </div>
+        <div class="card">
+          <h3>Marketing Collateral</h3>
+          <p>Visual Aids, MR bags, brochures, flyers, social posts, banners, and more.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio -->
+  <section id="portfolio" class="section alt">
+    <div class="container">
+      <h2 class="section-title">Portfolio</h2>
+      <p class="muted center">Add your project images to the <code>assets/</code> folder and update the image paths below.</p>
+      <div class="grid four gallery">
+        <!-- Replace src with your real images (e.g., assets/work1.jpg) -->
+        <figure class="shot">
+          <img src="assets/work1.jpg" alt="Project 1" />
+          <figcaption>Project Title 1</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="assets/work2.jpg" alt="Project 2" />
+          <figcaption>Project Title 2</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="assets/work3.jpg" alt="Project 3" />
+          <figcaption>Project Title 3</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="assets/work4.jpg" alt="Project 4" />
+          <figcaption>Project Title 4</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section">
+    <div class="container about">
+      <div>
+        <h2 class="section-title">About PHARMADESIGNSHUB</h2>
+        <p>We craft high-impact, regulation-aware designs for pharmaceutical brands. From logo to packaging to print, we combine creativity with industry discipline so your products look premium and compliant.</p>
+        <ul class="ticks">
+          <li>Fast turnarounds & clear communication</li>
+          <li>Print-ready deliverables</li>
+          <li>End-to-end brand support</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section alt">
+    <div class="container">
+      <h2 class="section-title">Contact</h2>
+      <div class="contact-wrap">
+        <div class="contact-card">
+          <p><strong>Email:</strong> <a href="mailto:pharmadesignshub@gmail.com">pharmadesignshub@gmail.com</a></p>
+          <p><strong>Phone:</strong> <a href="tel:+918278473450">+91 82784 73450</a></p>
+          <p><strong>Address:</strong> 7, Indra Garden, Near ITI, Yamuna Nagar, Haryana 135001</p>
+          <p class="muted">Tip: On GitHub Pages, forms need a service. Use the mail link above, or hook this form to Formspree/Netlify later.</p>
+        </div>
+
+        <!-- Mailto fallback form -->
+        <form class="contact-form" action="mailto:pharmadesignshub@gmail.com" method="post" enctype="text/plain">
+          <label>
+            Your Name
+            <input type="text" name="name" required />
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" required />
+          </label>
+          <label>
+            Message
+            <textarea name="message" rows="5" required></textarea>
+          </label>
+          <button class="btn" type="submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container foot">
+      <p>© <span id="y"></span> PHARMA DESIGNS HUB — All rights reserved.</p>
+      <a href="#home" class="top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script>
+    // Set current year
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
 </body>
-</html>
+              </html>
