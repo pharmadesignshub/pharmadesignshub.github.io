@@ -4,45 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Pharma Designs Hub</title>
-
-    <!-- jQuery -->
+    <link rel="stylesheet" href="style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    
-    <!-- Turn.js -->
-    <script src="https://cdn.jsdelivr.net/gh/blasten/turn.js@4.1.0/turn.min.js"></script>
-
-    <style>
-        body { font-family: Arial, sans-serif; text-align:center; background: #f2f2f2; }
-        #flipbook { width: 800px; height: 400px; margin: 50px auto; }
-        #flipbook .page { background: #fff; border: 1px solid #ccc; }
-        #flipbook img { width: 100%; height: 100%; object-fit: cover; }
-    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/4.1.0/turn.min.js"></script>
 </head>
 <body>
+    <header>
+        <h1>Pharma Designs Hub Portfolio</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
 
-<h1>Pharma Designs Hub Portfolio</h1>
-<div id="flipbook"></div>
+    <main>
+        <div id="flipbook" style="width:800px; height:400px; margin: 50px auto;"></div>
+    </main>
 
-<script>
-    $(window).on('load', function() { // wait for images to load
-        const totalPages = 5; // update with the actual number of images
-        for (let i = 1; i <= totalPages; i++) {
-            $('#flipbook').append(
-                $('<div class="page"></div>').append(
-                    $('<img>').attr('src', `assets/portfolio/page${i}.jpg`).attr('alt', `Page ${i}`)
-                )
-            );
-        }
+    <footer>
+        &copy; 2025 Pharma Designs Hub
+    </footer>
 
-        $('#flipbook').turn({
-            width: 800,
-            height: 400,
-            autoCenter: true,
-            gradients: true,
-            acceleration: true
-        });
-    });
-</script>
-
+    <script src="script.js"></script>
 </body>
 </html>
