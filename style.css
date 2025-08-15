@@ -21,9 +21,9 @@ body {
 
 /* Container */
 .container {
-  width: 90%;
   max-width: 1200px;
-  margin: auto;
+  width: 100%;
+  padding: 0 1rem;
 }
 
 /* Header */
