@@ -33,6 +33,24 @@ body {
   color: #fff;
 }
 
+/* Top Navigation Logo */
+header .logo img {
+  max-height: 50px;   /* adjust size */
+  width: auto;        /* keep aspect ratio */
+}
+
+@media (max-width: 768px) {
+  header .logo img {
+    max-height: 40px; /* smaller on tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  header .logo img {
+    max-height: 35px; /* smallest on mobile */
+  }
+}
+
 .nav-wrapper {
   display: flex;
   align-items: center;
