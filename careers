@@ -1,49 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Careers | PDH – Pharma Design’s Hub</title>
-  <link href="style.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Careers | Pharma Design's Hub</title>
+  <link href="style.css" rel="stylesheet" />
 </head>
 <body>
 <header class="site-header">
   <div class="container nav-wrapper">
-    <a class="brand" href="index.html"><img src="assets/logo.png" class="logo"><span class="brand-text">PDH</span></a>
-    <button class="hamburger"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
+    <a class="brand" href="index.html">
+      <img src="assets/logo.png" class="logo" alt="Pharma Design's Hub logo" />
+      <span class="brand-text">Pharma Design's Hub</span>
+    </a>
+    <button class="hamburger">
+      <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+    </button>
     <nav class="nav">
-      <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="careers.html">Careers</a><a href="contact.html">Contact</a>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="careers.html">Careers</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </div>
 </header>
 
 <section class="page-hero">
   <div class="container">
-    <h1>Careers at PDH</h1>
-    <p>Join a creative team shaping the future of pharma branding.</p>
+    <h1>Careers</h1>
   </div>
 </section>
 
-<div class="container careers">
-  <div class="job">
-    <h3>Graphic Designer</h3>
-    <p>Create engaging visuals for print and digital pharma campaigns.</p>
-    <a class="btn btn-light" href="contact.html">Apply Now</a>
-  </div>
-  <div class="job">
-    <h3>Marketing Specialist</h3>
-    <p>Plan and execute brand promotion strategies for healthcare clients.</p>
-    <a class="btn btn-light" href="contact.html">Apply Now</a>
-  </div>
+<div class="container">
+  <h2>Join Our Team</h2>
+  <p>We’re always looking for passionate and talented designers, strategists, and marketers to join Pharma Design's Hub.</p>
+  <h3>Current Openings</h3>
+  <ul>
+    <li>Graphic Designer (Full-time, Remote)</li>
+    <li>Marketing Executive (Full-time, On-site)</li>
+  </ul>
+  <p>To apply, send your CV and portfolio to: <strong>pharmadesignshub@gmail.com</strong></p>
 </div>
 
 <footer class="site-footer">
   <div class="container footer-grid">
-    <div><h4>Pharma Design’s Hub</h4><p>Creative solutions for pharma & beyond.</p></div>
-    <div><h4>Contact</h4><ul><li>Email: hello@pdh-designs.com</li><li><strong>Kuldeep – Managing Director</strong></li></ul></div>
-    <div><h4>Links</h4><ul><li><a href="services.html">Services</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="careers.html">Careers</a></li></ul></div>
+    <div>
+      <h4>Pharma Design's Hub</h4>
+      <p>Creative solutions for pharma & beyond.</p>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul>
+        <li>Email: pharmadesignshub@gmail.com</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Links</h4>
+      <ul>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="careers.html">Careers</a></li>
+      </ul>
+    </div>
   </div>
-  <div class="footer-bottom"><p>© <span id="year"></span> PDH. All rights reserved.</p></div>
+  <div class="footer-bottom">
+    <p>© <span id="year"></span> Pharma Design's Hub. All rights reserved.</p>
+  </div>
 </footer>
 <script src="main.js"></script>
 </body>
