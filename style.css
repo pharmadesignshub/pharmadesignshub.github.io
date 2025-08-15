@@ -279,6 +279,7 @@ header .logo img {
     position: absolute;
     top: 70px;
     right: 0;
+    
     width: 200px;
     padding: 1rem;
   }
@@ -291,3 +292,21 @@ header .logo img {
     display: flex;
   }
     }
+
+/* Top Navigation Logo */
+header .logo img {
+  max-height: 50px;
+  width: auto;
+}
+
+@media (max-width: 768px) {
+  header .logo img {
+    max-height: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  header .logo img {
+    max-height: 35px;
+  }
+}
