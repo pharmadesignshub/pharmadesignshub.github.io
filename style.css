@@ -150,6 +150,7 @@ body {
   background: var(--primary-color);
   color: #fff;
   margin-top: 3rem;
+  position: relative;
 }
 
 .footer-grid {
@@ -159,25 +160,22 @@ body {
   padding: 2rem 0;
 }
 
-.footer-grid h4 {
-  color: var(--accent-color);
+.footer-bottom {
+  text-align: center;
+  padding: 1rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  font-size: 0.9rem;
 }
 
 .footer-grid ul {
+  padding-left: 0;
   list-style: none;
 }
 
-.footer-grid ul li {
-  margin-bottom: 0.5rem;
-}
-
-.footer-grid ul li a {
-  color: #fff;
-  text-decoration: none;
-}
-
-.footer-grid ul li a:hover {
-  color: var(--accent-color);
+.footer-grid li {
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
 .footer-bottom {
