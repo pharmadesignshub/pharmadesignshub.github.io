@@ -1,45 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact | PHARMADESIGNSHUB</title>
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | PDH – Pharma Design’s Hub</title>
+  <link href="style.css" rel="stylesheet">
 </head>
 <body>
-
-<header>
-  <div class="container">
-    <h2>PHARMADESIGNSHUB</h2>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="careers.html">Careers</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+<header class="site-header">
+  <div class="container nav-wrapper">
+    <a class="brand" href="index.html"><img src="assets/logo.png" class="logo"><span class="brand-text">PDH</span></a>
+    <button class="hamburger"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
+    <nav class="nav">
+      <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="careers.html">Careers</a><a href="contact.html">Contact</a>
     </nav>
   </div>
 </header>
 
-<section>
-  <h2>Contact Us</h2>
-  <div class="container career-form">
-    <form action="submit_contact.php" method="POST">
-      <input type="text" name="name" placeholder="Full Name" required>
-      <input type="email" name="email" placeholder="Email Address" required>
-      <input type="text" name="subject" placeholder="Subject" required>
-      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
+<section class="page-hero">
+  <div class="container">
+    <h1>Contact Us</h1>
+    <p>We’d love to hear from you. Let’s talk about your next project.</p>
   </div>
 </section>
 
-<footer>
-  <p>&copy; 2025 PHARMADESIGNSHUB | Email: pharmadesignshub@gmail.com</p>
-</footer>
+<div class="container contact-grid">
+  <div>
+    <form class="contact-form">
+      <label><span>Name</span><input type="text" name="name" required></label>
+      <label><span>Email</span><input type="email" name="email" required></label>
+      <label><span>Message</span><textarea name="message" rows="5" required></textarea></label>
+      <button class="btn btn-light" type="submit">Send Message</button>
+    </form>
+  </div>
+  <div>
+    <h3>Our Details</h3>
+    <p><strong>Email:</strong> hello@pdh-designs.com</p>
+    <p><strong>Kuldeep – Managing Director</strong></p>
+  </div>
+</div>
 
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div><h4>Pharma Design’s Hub</h4><p>Creative solutions for pharma & beyond.</p></div>
+    <div><h4>Contact</h4><ul><li>Email: hello@pdh-designs.com</li><li><strong>Kuldeep – Managing Director</strong></li></ul></div>
+    <div><h4>Links</h4><ul><li><a href="services.html">Services</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="careers.html">Careers</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><p>© <span id="year"></span> PDH. All rights reserved.</p></div>
+</footer>
+<script src="main.js"></script>
 </body>
 </html>
