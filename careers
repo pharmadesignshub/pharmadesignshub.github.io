@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Careers | PHARMADESIGNSHUB</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <h2>PHARMADESIGNSHUB</h2>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section>
+  <h2>Join Our Team</h2>
+  <div class="container">
+    <p>We’re always looking for creative and talented individuals to join our team. Check out our open positions below and apply now!</p>
+
+    <div class="career-form">
+      <form action="submit_application.php" method="POST" enctype="multipart/form-data">
+        <input type="text" name="name" placeholder="Full Name" required>
+        <input type="email" name="email" placeholder="Email Address" required>
+        <input type="file" name="resume" required>
+        <textarea name="message" placeholder="Why should we hire you?" rows="5"></textarea>
+        <button type="submit">Apply Now</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 PHARMADESIGNSHUB | Email: pharmadesignshub@gmail.com | Phone: 8278473450</p>
+</footer>
+
+</body>
+</html>
