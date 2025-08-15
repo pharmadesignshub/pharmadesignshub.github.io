@@ -293,20 +293,28 @@ header .logo img {
   }
     }
 
-/* Top Navigation Logo */
-header .logo img {
-  max-height: 50px;
-  width: auto;
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
 }
 
 @media (max-width: 768px) {
-  header .logo img {
-    max-height: 40px;
+  nav {
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    z-index: 999;
   }
-}
-
-@media (max-width: 480px) {
-  header .logo img {
-    max-height: 35px;
+  nav.active {
+    display: flex;
+  }
+  .menu-toggle {
+    display: block;
   }
 }
