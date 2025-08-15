@@ -40,10 +40,10 @@ body {
   padding: 0.5rem 1rem;
 }
 
-.logo {
-  max-width: 120px;
-  width: 50%;
+.logo img {
+  max-width: 100%;
   height: auto;
+  display: block;
 }
 
 .brand {
