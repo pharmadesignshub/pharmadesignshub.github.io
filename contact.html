@@ -1,18 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact | PDH – Pharma Design’s Hub</title>
-  <link href="style.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact | Pharma Design's Hub</title>
+  <link href="style.css" rel="stylesheet" />
 </head>
 <body>
 <header class="site-header">
   <div class="container nav-wrapper">
-    <a class="brand" href="index.html"><img src="assets/logo.png" class="logo"><span class="brand-text">PDH</span></a>
-    <button class="hamburger"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
+    <a class="brand" href="index.html">
+      <img src="assets/logo.png" class="logo" alt="Pharma Design's Hub logo" />
+      <span class="brand-text">Pharma Design's Hub</span>
+    </a>
+    <button class="hamburger">
+      <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+    </button>
     <nav class="nav">
-      <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="careers.html">Careers</a><a href="contact.html">Contact</a>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="careers.html">Careers</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </div>
 </header>
@@ -20,33 +30,49 @@
 <section class="page-hero">
   <div class="container">
     <h1>Contact Us</h1>
-    <p>We’d love to hear from you. Let’s talk about your next project.</p>
   </div>
 </section>
 
-<div class="container contact-grid">
-  <div>
-    <form class="contact-form">
-      <label><span>Name</span><input type="text" name="name" required></label>
-      <label><span>Email</span><input type="email" name="email" required></label>
-      <label><span>Message</span><textarea name="message" rows="5" required></textarea></label>
-      <button class="btn btn-light" type="submit">Send Message</button>
-    </form>
-  </div>
-  <div>
-    <h3>Our Details</h3>
-    <p><strong>Email:</strong> hello@pdh-designs.com</p>
-    <p><strong>Kuldeep – Managing Director</strong></p>
+<div class="container contact-form">
+  <h2>We’d Love to Hear from You</h2>
+  <form>
+    <label>Name</label>
+    <input type="text" placeholder="Your name" required>
+    <label>Email</label>
+    <input type="email" placeholder="Your email" required>
+    <label>Message</label>
+    <textarea placeholder="Your message" required></textarea>
+    <button type="submit" class="btn btn-light">Send Message</button>
+  </form>
+  <div class="contact-details">
+    <p><strong>Email:</strong> pharmadesignshub@gmail.com</p>
   </div>
 </div>
 
 <footer class="site-footer">
   <div class="container footer-grid">
-    <div><h4>Pharma Design’s Hub</h4><p>Creative solutions for pharma & beyond.</p></div>
-    <div><h4>Contact</h4><ul><li>Email: hello@pdh-designs.com</li><li><strong>Kuldeep – Managing Director</strong></li></ul></div>
-    <div><h4>Links</h4><ul><li><a href="services.html">Services</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="careers.html">Careers</a></li></ul></div>
+    <div>
+      <h4>Pharma Design's Hub</h4>
+      <p>Creative solutions for pharma & beyond.</p>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul>
+        <li>Email: pharmadesignshub@gmail.com</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Links</h4>
+      <ul>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="careers.html">Careers</a></li>
+      </ul>
+    </div>
   </div>
-  <div class="footer-bottom"><p>© <span id="year"></span> PDH. All rights reserved.</p></div>
+  <div class="footer-bottom">
+    <p>© <span id="year"></span> Pharma Design's Hub. All rights reserved.</p>
+  </div>
 </footer>
 <script src="main.js"></script>
 </body>
