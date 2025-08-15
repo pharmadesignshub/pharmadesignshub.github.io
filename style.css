@@ -94,11 +94,24 @@ body {
 
 /* Hero Sections */
 .hero {
-  height: 40vh; /* shorter height */
+  height: 60vh; /* Shorter than full screen */
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: 50vh; /* Smaller for tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    height: 45vh; /* Smaller for mobile */
+  }
 }
 
 .page-hero {
