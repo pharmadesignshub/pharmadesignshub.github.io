@@ -1,6 +1,6 @@
 /* General Styles */
 * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
-body { background: #1E4DA1; color: #333; line-height: 1.6; }
+body { background: #1e4Da1; color: #333; line-height: 1.6; }
 a { text-decoration: none; color: inherit; }
 .container { width: 90%; max-width: 1200px; margin: 0 auto; }
 
@@ -10,13 +10,13 @@ header .container { display: flex; justify-content: space-between; align-items: 
 header nav ul { display: flex; list-style: none; }
 header nav ul li { margin-left: 25px; }
 header nav ul li a { font-weight: 500; color: #2e7d32; transition: 0.3s; }
-header nav ul li a:hover { color: #1b5e20; }
+header nav ul li a:hover { color: #1e4Da1; }
 
 /* Hero Section */
 .hero { background: url('../images/hero-bg.jpg') center/cover no-repeat; height: 90vh; display: flex; align-items: center; justify-content: center; text-align: center; color: #fff; }
 .hero h1 { font-size: 48px; margin-bottom: 15px; }
 .hero p { font-size: 24px; margin-bottom: 25px; }
-.hero .btn { background: #2e7d32; color: #fff; padding: 12px 25px; border: none; border-radius: 6px; cursor: pointer; font-size: 18px; transition: 0.3s; }
+.hero .btn { background: #1e4Da1; color: #fff; padding: 12px 25px; border: none; border-radius: 6px; cursor: pointer; font-size: 18px; transition: 0.3s; }
 .hero .btn:hover { background: #1b5e20; }
 
 /* Sections */
