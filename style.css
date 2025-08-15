@@ -174,10 +174,14 @@ body {
 }
 
 .footer-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.5rem;
-  padding: 2rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer-grid > div {
+  flex: 1 1 200px; /* Flexible columns */
+  min-width: 150px;
 }
 
 .footer-bottom {
