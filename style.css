@@ -93,24 +93,41 @@ body {
 }
 
 /* Hero Sections */
+/* Hero Section Logo Fix */
 .hero {
-  height: 60vh; /* Shorter than full screen */
+  height: 60vh; /* shorter than full screen */
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start; /* push content up */
   align-items: center;
+  padding-top: 50px; /* move logo higher */
   text-align: center;
+}
+
+.hero img {
+  max-width: 200px; /* smaller on desktop */
+  height: auto;
 }
 
 @media (max-width: 768px) {
   .hero {
-    height: 50vh; /* Smaller for tablets */
+    height: 50vh;
+    padding-top: 30px;
+  }
+
+  .hero img {
+    max-width: 150px; /* smaller on tablets/mobiles */
   }
 }
 
 @media (max-width: 480px) {
   .hero {
-    height: 45vh; /* Smaller for mobile */
+    height: 45vh;
+    padding-top: 20px;
+  }
+
+  .hero img {
+    max-width: 120px; /* fits small phones */
   }
 }
 
