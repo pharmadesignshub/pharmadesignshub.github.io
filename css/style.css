@@ -1,6 +1,6 @@
 /* General Styles */
 * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
-body { background: #f8f8f8; color: #333; line-height: 1.6; }
+body { background: #1E4DA1; color: #333; line-height: 1.6; }
 a { text-decoration: none; color: inherit; }
 .container { width: 90%; max-width: 1200px; margin: 0 auto; }
 
