@@ -1,44 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Services | PHARMADESIGNSHUB</title>
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | PDH – Pharma Design’s Hub</title>
+  <link href="style.css" rel="stylesheet">
 </head>
 <body>
-
-<header>
-  <div class="container">
-    <h2>PHARMADESIGNSHUB</h2>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="careers.html">Careers</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+<header class="site-header">
+  <div class="container nav-wrapper">
+    <a class="brand" href="index.html"><img src="assets/logo.png" class="logo"><span class="brand-text">PDH</span></a>
+    <button class="hamburger"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
+    <nav class="nav">
+      <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="careers.html">Careers</a><a href="contact.html">Contact</a>
     </nav>
   </div>
 </header>
 
-<section>
-  <h2>Our Services</h2>
-  <div class="services-grid container">
-    <div class="service-card"><h3>Logo & Branding</h3><p>Creative branding solutions for your pharma business.</p></div>
-    <div class="service-card"><h3>Printing Services</h3><p>High-quality printing for packaging and promotional material.</p></div>
-    <div class="service-card"><h3>Packaging Design</h3><p>Custom packaging design that stands out.</p></div>
-    <div class="service-card"><h3>Digital Marketing Assets</h3><p>Graphics and visuals for social media & digital campaigns.</p></div>
-    <div class="service-card"><h3>Custom Illustrations</h3><p>Professional illustrations to make your products shine.</p></div>
-    <div class="service-card"><h3>Consulting</h3><p>Expert advice on design & marketing strategies.</p></div>
+<section class="page-hero">
+  <div class="container">
+    <h1>Our Services</h1>
+    <p>Design solutions tailored for pharma and healthcare.</p>
   </div>
 </section>
 
-<footer>
-  <p>&copy; 2025 PHARMADESIGNSHUB | Email: pharmadesignshub@gmail.com | Phone: 8278473450</p>
-</footer>
+<div class="container card-grid">
+  <div class="card">
+    <h3>Brand Identity</h3>
+    <p>Custom logo design, color schemes, and brand style guides.</p>
+  </div>
+  <div class="card">
+    <h3>Packaging Design</h3>
+    <p>Functional and compliant packaging for pharmaceuticals.</p>
+  </div>
+  <div class="card">
+    <h3>Marketing Collateral</h3>
+    <p>Brochures, posters, and digital media for effective campaigns.</p>
+  </div>
+  <div class="card">
+    <h3>Digital Assets</h3>
+    <p>Social media templates, email campaigns, and ad creatives.</p>
+  </div>
+</div>
 
+<section class="cta">
+  <div class="container">
+    <h2>Need a custom design?</h2>
+    <p>Contact us today to discuss your project.</p>
+    <a class="btn btn-light" href="contact.html">Get in Touch</a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div><h4>Pharma Design’s Hub</h4><p>Creative solutions for pharma & beyond.</p></div>
+    <div><h4>Contact</h4><ul><li>Email: hello@pdh-designs.com</li><li><strong>Kuldeep – Managing Director</strong></li></ul></div>
+    <div><h4>Links</h4><ul><li><a href="services.html">Services</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="careers.html">Careers</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><p>© <span id="year"></span> PDH. All rights reserved.</p></div>
+</footer>
+<script src="main.js"></script>
 </body>
 </html>
