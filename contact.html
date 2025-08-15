@@ -1,29 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact - PHARMADESIGNSHUB</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | PHARMADESIGNSHUB</title>
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header>
+
+<header>
+  <div class="container">
+    <h2>PHARMADESIGNSHUB</h2>
     <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="portfolio.html">Portfolio</a>
-      <a href="contact.html">Contact</a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </nav>
-  </header>
+  </div>
+</header>
 
-  <main>
-    <h1>Contact Us</h1>
-    <p>Email: <a href="mailto:pharmadesignshub@gmail.com">pharmadesignshub@gmail.com</a></p>
-           </main>
+<section>
+  <h2>Contact Us</h2>
+  <div class="container career-form">
+    <form action="submit_contact.php" method="POST">
+      <input type="text" name="name" placeholder="Full Name" required>
+      <input type="email" name="email" placeholder="Email Address" required>
+      <input type="text" name="subject" placeholder="Subject" required>
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</section>
 
-  <footer>
-    <p>© 2025 PHARMADESIGNSHUB. All rights reserved.</p>
-  </footer>
+<footer>
+  <p>&copy; 2025 PHARMADESIGNSHUB | Email: pharmadesignshub@gmail.com</p>
+</footer>
+
 </body>
 </html>
