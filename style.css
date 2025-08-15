@@ -1,0 +1,103 @@
+/* style.css */
+:root{
+  --blue:#1261A0;
+  --black:#000000;
+  --white:#FFFFFF;
+  --gray:#F5F5F5;
+  --muted:#667084;
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family:'Open Sans',sans-serif;
+  color:var(--black);
+  background:var(--white);
+  line-height:1.6;
+}
+
+h1,h2,h3,h4{font-family:'Montserrat',sans-serif; margin:0 0 .5rem}
+h1{font-size:clamp(1.8rem,2.5vw,3rem);}
+h2{font-size:clamp(1.4rem,2vw,2.2rem);}
+h3{font-size:clamp(1.15rem,1.6vw,1.5rem);}
+p{margin:.5rem 0 1rem}
+
+.container{max-width:1100px;margin:0 auto;padding:0 1rem}
+
+.site-header{
+  position:sticky; top:0; z-index:1000;
+  background:var(--blue); color:var(--white);
+}
+.nav-wrapper{display:flex; align-items:center; justify-content:space-between; height:64px}
+.brand{display:flex; align-items:center; gap:.6rem; color:#fff; text-decoration:none}
+.logo{height:36px; width:auto}
+.brand-text{font-weight:800;}
+
+.nav{display:flex; gap:1rem}
+.nav a{color:#fff; text-decoration:none; font-weight:600; padding:.5rem .6rem; border-radius:10px}
+.nav a:hover{background:rgba(255,255,255,.12)}
+
+.hamburger{display:none; background:none; border:none; cursor:pointer}
+.hamburger .bar{display:block; width:24px; height:2px; background:#fff; margin:5px 0; border-radius:2px}
+
+.hero{
+  background:var(--blue);
+  color:#fff;
+  padding:5rem 0 4rem;
+  text-align:center;
+}
+.hero-logo{width:120px; margin-bottom:1rem}
+.hero-actions{display:flex; gap:.75rem; justify-content:center; flex-wrap:wrap}
+
+.strip{background:var(--gray); padding:2.5rem 0}
+.strip-grid{display:grid; gap:1rem; grid-template-columns:repeat(3,1fr)}
+.strip-card{background:#fff; padding:1.25rem; border-radius:16px;}
+
+.page-hero{background:var(--blue); color:#fff; padding:3.2rem 0; margin-bottom:1.5rem}
+
+.two-col{display:grid; gap:2rem; grid-template-columns:1.1fr 1fr}
+.img-placeholder{background:var(--gray); border:2px dashed #ccc; border-radius:18px; height:340px; display:flex; align-items:center; justify-content:center}
+.highlight{background:#f0f6ff; border-left:6px solid var(--blue); padding:1rem 1.25rem; border-radius:10px}
+
+.card-grid{display:grid; gap:1rem; grid-template-columns:repeat(4,1fr)}
+.card{background:#fff; padding:1.25rem; border-radius:16px; border:1px solid #eee}
+
+.cta{background:var(--blue); color:#fff; padding:2.2rem 0; text-align:center}
+
+.gallery{display:grid; gap:1rem; grid-template-columns:repeat(3,1fr)}
+.tile{background:#e6eef7; border-radius:16px; min-height:180px; text-decoration:none; color:#fff; display:flex; align-items:flex-end; overflow:hidden}
+.tile span{width:100%; padding:1rem; background:linear-gradient(0deg, rgba(18,97,160,0.9), rgba(18,97,160,0) 70%)}
+
+.careers{display:grid; gap:2rem; grid-template-columns:1fr 1fr}
+.job{background:#fff; border:1px solid #eee; border-radius:16px; padding:1.25rem}
+
+.contact-grid{display:grid; gap:2rem; grid-template-columns:1.1fr .9fr}
+.contact-form label{display:block; margin-bottom:.75rem}
+.contact-form span{display:block; font-weight:600; margin-bottom:.25rem}
+.contact-form input, .contact-form textarea{
+  width:100%; padding:.75rem; border:1px solid #ccc; border-radius:12px;
+}
+.contact-form button{margin-top:.5rem}
+
+.site-footer{background:#0F4C81; color:#fff; margin-top:2rem}
+.footer-grid{display:grid; gap:1rem; grid-template-columns:repeat(3,1fr); padding:2rem 1rem 1rem}
+.footer-bottom{text-align:center; padding:1rem 0; border-top:1px solid rgba(255,255,255,.15)}
+
+.btn{display:inline-block; padding:.7rem 1rem; border-radius:12px; text-decoration:none; font-weight:700}
+.btn-light{background:#fff; color:#000}
+.btn-outline{border:2px solid #fff; color:#fff}
+
+@media (max-width:980px){
+  .strip-grid{grid-template-columns:1fr 1fr}
+  .card-grid{grid-template-columns:1fr 1fr}
+  .gallery{grid-template-columns:1fr 1fr}
+  .two-col{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+  .careers{grid-template-columns:1fr}
+}
+@media (max-width:720px){
+  .nav{display:none; flex-direction:column; background:var(--blue); position:absolute; top:64px; right:0; padding:.75rem}
+  .nav.open{display:flex}
+  .hamburger{display:block}
+  .strip-grid, .card-grid, .gallery{grid-template-columns:1fr}
+             }
