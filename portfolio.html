@@ -49,6 +49,7 @@
     <p>A peek at recent work. More on request.</p>
   </div>
 </section>
+
 <section id="portfolio-flipbook" class="container">
   <h2 style="text-align:center; margin-bottom:20px;">Portfolio Showcase</h2>
 
@@ -103,6 +104,36 @@
     <small>© <span id="year"></span> Pharma Designs Hub. All rights reserved.</small>
   </div>
 </footer>
+
+
+<!-- Flipbook JS Libraries -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/4.1.0/turn.min.js"></script>
+
+<script>
+  $(document).ready(function () {
+    // Initialize flipbook
+    $("#flipbook-container").turn({
+      width: 900,
+      height: 600,
+      autoCenter: true,
+      gradients: true,
+      elevation: 50
+    });
+
+    // Fullscreen button
+    $("#fullscreen-btn").on("click", function () {
+      let elem = document.getElementById("flipbook-container");
+      if (elem.requestFullscreen) {
+        elem.requestFullscreen();
+      } else if (elem.webkitRequestFullscreen) {
+        elem.webkitRequestFullscreen();
+      } else if (elem.msRequestFullscreen) {
+        elem.msRequestFullscreen();
+      }
+    });
+  });
+</script>
 
 </body>
 </html>
