@@ -95,19 +95,25 @@ body {
 }
 
 /* ----------------- Flipbook Styles ----------------- */
+/* Flipbook container */
 #flipbook-container {
   width: 900px;
   height: 600px;
-  margin: 2rem auto;
-  box-shadow: var(--shadow);
-  border-radius: var(--radius);
-  background: var(--card);
+  margin: 40px auto;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  background: #fff;
+  position: relative;   /* required for child positioning */
+  overflow: hidden;     /* hides extra images */
 }
-#flipbook-container img {
+
+/* Each page */
+#flipbook-container > div {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  border-radius: var(--radius);
+  position: absolute;   /* stack pages on top of each other */
+  top: 0;
+  left: 0;
+}
 }
 .flip-arrow {
   position: absolute;
