@@ -109,21 +109,33 @@ body {
   object-fit: cover;
   border-radius: var(--radius);
 }
-.flipbook-controls {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 1rem;
-}
-.flipbook-controls button {
-  padding: 0.6rem 1rem;
-  border: none;
-  border-radius: 0.6rem;
-  background: var(--brand);
+.flip-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(122,162,255,0.8); /* semi-transparent brand */
   color: #081226;
-  font-weight: 600;
+  border: none;
+  padding: 0.8rem 1.2rem;
+  border-radius: 50%;
+  font-size: 1.5rem;
   cursor: pointer;
+  z-index: 10;
+  transition: background 0.3s;
 }
-.flipbook-controls button:hover {
+
+.flip-arrow:hover {
   background: var(--brand-2);
+}
+
+.flip-arrow.left {
+  left: -60px;  /* adjust distance outside book */
+}
+
+.flip-arrow.right {
+  right: -60px;
+}
+
+#flipbook-container {
+  position: relative; /* so arrows align properly */
 }
