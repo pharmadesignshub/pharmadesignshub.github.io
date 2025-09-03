@@ -42,12 +42,16 @@
     </div>
 
     <!-- Flipbook Controls -->
-    <div class="flipbook-controls">
-      <button onclick="$('#flipbook-container').turn('previous')">⬅ Prev</button>
-      <button onclick="$('#flipbook-container').turn('next')">Next ➡</button>
-      <button id="fullscreen-btn">⛶ Fullscreen</button>
-    </div>
-  </div>
+  <div id="flipbook-container">
+  <div><img src="assets/portfolio/page1.jpg" alt="Portfolio Page 1"></div>
+  <div><img src="assets/portfolio/page2.jpg" alt="Portfolio Page 2"></div>
+  <div><img src="assets/portfolio/page3.jpg" alt="Portfolio Page 3"></div>
+  <div><img src="assets/portfolio/page4.jpg" alt="Portfolio Page 4"></div>
+
+  <!-- Arrows -->
+  <button class="flip-arrow left" onclick="$('#flipbook-container').turn('previous')">⬅</button>
+  <button class="flip-arrow right" onclick="$('#flipbook-container').turn('next')">➡</button>
+</div>
 
   <!-- Footer -->
   <footer class="site-footer">
