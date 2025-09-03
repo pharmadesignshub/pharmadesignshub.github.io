@@ -1,100 +1,105 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Pharma Designs Hub — Pharma Designs Hub</title>
-<meta name="description" content="Branding, packaging, visual identity, print and digital design tailored for the pharmaceutical and healthcare industry." />
-<link rel="icon" href="assets/img/logo.svg" type="image/svg+xml" />
-<meta property="og:title" content="Pharma Designs Hub" />
-<meta property="og:description" content="Designs that make pharma brands look professional and trustworthy." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://pharmadesignshub.com/" />
-<meta property="og:image" content="https://pharmadesignshub.com/assets/img/og.png" />
-<link rel="stylesheet" href="assets/css/style.css" />
-<script defer src="assets/js/main.js"></script>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pharma Designs Hub - Portfolio Flipbook</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/4.1.0/turn.min.js"></script>
+  <style>
+    body {
+      background: #f4f4f4;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      margin-bottom: 20px;
+      font-size: 26px;
+      color: #333;
+    }
+    #flipbook {
+      margin: 0 auto;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      border: 2px solid #ddd;
+      background: white;
+    }
+    #flipbook img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .controls {
+      margin-top: 15px;
+    }
+    .controls button {
+      padding: 10px 18px;
+      margin: 0 8px;
+      font-size: 15px;
+      border: none;
+      background: #0073e6;
+      color: white;
+      cursor: pointer;
+      border-radius: 6px;
+      transition: background 0.3s;
+    }
+    .controls button:hover {
+      background: #005bb5;
+    }
+    /* Responsive Heading */
+    @media (max-width: 768px) {
+      h1 { font-size: 20px; }
+    }
+  </style>
 </head>
 <body>
 
-<header class="site-header">
-  <div class="container header-inner">
-    <a class="brand" href="index.html" aria-label="Pharma Designs Hub home">
-      <img src="assets/img/logo.png" alt="Pharma Designs Hub logo" width="36" height="36"/>
-      <span>Pharma Designs Hub</span>
-    </a>
+  <h1>Pharma Designs Hub - Portfolio</h1>
 
-    <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-controls="siteNav" aria-label="Open menu">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </button>
-
-    <nav id="siteNav" class="nav" aria-label="Primary">
-      <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="portfolio.html">Portfolio</a>
-      <a href="pricing.html">Pricing</a>
-      <a href="about.html">About</a>
-      <a class="btn" href="contact.html">Contact</a>
-    </nav>
+  <div id="flipbook">
+    <div><img src="portfolio/page1.jpg" alt="Page 1"></div>
+    <div><img src="portfolio/page2.jpg" alt="Page 2"></div>
+    <div><img src="portfolio/page3.jpg" alt="Page 3"></div>
+    <div><img src="portfolio/page4.jpg" alt="Page 4"></div>
   </div>
-</header>
 
-
-<section class="page-header">
-  <div class="container">
-    <h1>Portfolio</h1>
-    <p>A peek at recent work. More on request.</p>
+  <div class="controls">
+    <button onclick="$('#flipbook').turn('previous')">⬅ Previous</button>
+    <button onclick="$('#flipbook').turn('next')">Next ➡</button>
   </div>
-</section>
-<section class="container gallery">
-  <figure class="shot"><img src="assets/img/placeholder-1.svg" alt="Project 1"/><figcaption>Brand System</figcaption></figure>
-  <figure class="shot"><img src="assets/img/placeholder-2.svg" alt="Project 2"/><figcaption>Packaging</figcaption></figure>
-  <figure class="shot"><img src="assets/img/placeholder-3.svg" alt="Project 3"/><figcaption>Labeling</figcaption></figure>
-  <figure class="shot"><img src="assets/img/placeholder-4.svg" alt="Project 4"/><figcaption>Brochure</figcaption></figure>
-  <figure class="shot"><img src="assets/img/placeholder-5.svg" alt="Project 5"/><figcaption>Exhibition Design</figcaption></figure>
-  <figure class="shot"><img src="assets/img/placeholder-6.svg" alt="Project 6"/><figcaption>Social Media</figcaption></figure>
-</section>
 
+  <script>
+    function resizeFlipbook() {
+      var windowWidth = $(window).width();
+      var windowHeight = $(window).height();
 
-<footer class="site-footer">
-  <div class="container footer-grid">
-    <div>
-      <div class="brand-inline">
-        <img src="assets/img/logo.png" alt="Pharma Designs Hub logo" width="28" height="28"/>
-        <strong>Pharma Designs Hub</strong>
-      </div>
-      <p>Designs that make pharma brands look professional and trustworthy.</p>
-    </div>
-    <div>
-      <h4>Quick Links</h4>
-      <ul>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="pricing.html">Pricing</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>Contact</h4>
-      <ul class="contact-list">
-        <li>Email: <a href="mailto:pharmadesignshub@gmail.com">pharmadesignshub@gmail.com</a></li>
-        <li>Website: <a href="https://pharmadesignshub.com" target="_blank" rel="noopener">pharmadesignshub.com</a></li>
-      </ul>
-      <div class="socials">
-        <a href="#" aria-label="Instagram">Instagram</a>
-        <a href="#" aria-label="LinkedIn">LinkedIn</a>
-        <a href="#" aria-label="Facebook">Facebook</a>
-      </div>
-    </div>
-  </div>
-  <div class="container legal">
-    <small>© <span id="year"></span> Pharma Designs Hub. All rights reserved.</small>
-  </div>
-</footer>
+      // Set size dynamically based on screen width
+      var flipbookWidth = windowWidth > 1024 ? 1000 : 
+                          windowWidth > 768 ? 700 : 
+                          windowWidth > 480 ? 400 : 300;
+
+      var flipbookHeight = flipbookWidth * 0.6;
+
+      $("#flipbook").turn("size", flipbookWidth, flipbookHeight);
+    }
+
+    $(document).ready(function() {
+      $("#flipbook").turn({
+        width: 1000,
+        height: 600,
+        autoCenter: true,
+        elevation: 50,
+        gradients: true
+      });
+
+      resizeFlipbook();
+
+      $(window).resize(function() {
+        resizeFlipbook();
+      });
+    });
+  </script>
 
 </body>
 </html>
