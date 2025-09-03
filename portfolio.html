@@ -49,15 +49,23 @@
     <p>A peek at recent work. More on request.</p>
   </div>
 </section>
-<section class="container gallery">
-  <figure class="shot"><img src="assets/img/placeholder-1.svg" alt="Project 1"/><figcaption>Brand System</figcaption></figure>
-  <figure class="shot"><img src="assets/img/placeholder-2.svg" alt="Project 2"/><figcaption>Packaging</figcaption></figure>
-  <figure class="shot"><img src="assets/img/placeholder-3.svg" alt="Project 3"/><figcaption>Labeling</figcaption></figure>
-  <figure class="shot"><img src="assets/img/placeholder-4.svg" alt="Project 4"/><figcaption>Brochure</figcaption></figure>
-  <figure class="shot"><img src="assets/img/placeholder-5.svg" alt="Project 5"/><figcaption>Exhibition Design</figcaption></figure>
-  <figure class="shot"><img src="assets/img/placeholder-6.svg" alt="Project 6"/><figcaption>Social Media</figcaption></figure>
-</section>
+<section id="portfolio-flipbook" class="container">
+  <h2 style="text-align:center; margin-bottom:20px;">Portfolio Showcase</h2>
 
+  <div id="flipbook-container">
+    <div><img src="assets/portfolio/page1.jpg" alt="Portfolio Page 1"></div>
+    <div><img src="assets/portfolio/page2.jpg" alt="Portfolio Page 2"></div>
+    <div><img src="assets/portfolio/page3.jpg" alt="Portfolio Page 3"></div>
+    <div><img src="assets/portfolio/page4.jpg" alt="Portfolio Page 4"></div>
+    <!-- Add more pages as needed -->
+  </div>
+
+  <div class="flipbook-controls">
+    <button onclick="$('#flipbook-container').turn('previous')">&larr; Previous</button>
+    <button onclick="$('#flipbook-container').turn('next')">Next &rarr;</button>
+    <button id="fullscreen-btn">Full Screen</button>
+  </div>
+</section>
 
 <footer class="site-footer">
   <div class="container footer-grid">
