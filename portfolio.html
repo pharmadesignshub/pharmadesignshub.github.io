@@ -79,32 +79,20 @@
 
   <!-- Scripts -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/4.1.0/turn.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/3/turn.min.js"></script>
 
-  <script>
-    $(document).ready(function () {
-      // Initialize flipbook
-      $("#flipbook-container").turn({
-        width: 900,
-        height: 600,
-        autoCenter: true,
-        gradients: true,
-        elevation: 50
-      });
-
-      // Fullscreen button
-      $("#fullscreen-btn").on("click", function () {
-        let elem = document.getElementById("flipbook-container");
-        if (elem.requestFullscreen) {
-          elem.requestFullscreen();
-        } else if (elem.webkitRequestFullscreen) {
-          elem.webkitRequestFullscreen();
-        } else if (elem.msRequestFullscreen) {
-          elem.msRequestFullscreen();
-        }
-      });
+ <script>
+  $(document).ready(function () {
+    // Initialize flipbook
+    $("#flipbook-container").turn({
+      width: 900,
+      height: 600,
+      autoCenter: true,
+      gradients: true,
+      elevation: 50
     });
-  </script>
+  });
+</script>
 
 </body>
 </html>
