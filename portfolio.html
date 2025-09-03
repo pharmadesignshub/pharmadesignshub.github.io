@@ -1,139 +1,110 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Pharma Designs Hub — Pharma Designs Hub</title>
-<meta name="description" content="Branding, packaging, visual identity, print and digital design tailored for the pharmaceutical and healthcare industry." />
-<link rel="icon" href="assets/img/logo.svg" type="image/svg+xml" />
-<meta property="og:title" content="Pharma Designs Hub" />
-<meta property="og:description" content="Designs that make pharma brands look professional and trustworthy." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://pharmadesignshub.com/" />
-<meta property="og:image" content="https://pharmadesignshub.com/assets/img/og.png" />
-<link rel="stylesheet" href="assets/css/style.css" />
-<script defer src="assets/js/main.js"></script>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pharma Designs Hub - Portfolio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header class="site-header">
-  <div class="container header-inner">
-    <a class="brand" href="index.html" aria-label="Pharma Designs Hub home">
-      <img src="assets/img/logo.svg" alt="Pharma Designs Hub logo" width="36" height="36"/>
-      <span>Pharma Designs Hub</span>
-    </a>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <img src="assets/logo.png" alt="Pharma Designs Hub" width="40">
+        Pharma Designs Hub
+      </a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="portfolio.html" class="active">Portfolio</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-    <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-controls="siteNav" aria-label="Open menu">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </button>
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <h1>Our Portfolio</h1>
+      <p>Browse through our creative designs in flipbook format.</p>
+    </div>
+  </section>
 
-    <nav id="siteNav" class="nav" aria-label="Primary">
-      <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="portfolio.html">Portfolio</a>
-      <a href="pricing.html">Pricing</a>
-      <a href="about.html">About</a>
-      <a class="btn" href="contact.html">Contact</a>
-    </nav>
-  </div>
-</header>
-
-
-<section class="page-header">
+  <!-- Flipbook -->
   <div class="container">
-    <h1>Portfolio</h1>
-    <p>A peek at recent work. More on request.</p>
+    <div id="flipbook-container">
+      <div><img src="assets/portfolio/page1.jpg" alt="Portfolio Page 1"></div>
+      <div><img src="assets/portfolio/page2.jpg" alt="Portfolio Page 2"></div>
+      <div><img src="assets/portfolio/page3.jpg" alt="Portfolio Page 3"></div>
+      <div><img src="assets/portfolio/page4.jpg" alt="Portfolio Page 4"></div>
+      <!-- keep adding more pages here -->
+    </div>
+
+    <!-- Flipbook Controls -->
+    <div class="flipbook-controls">
+      <button onclick="$('#flipbook-container').turn('previous')">⬅ Prev</button>
+      <button onclick="$('#flipbook-container').turn('next')">Next ➡</button>
+      <button id="fullscreen-btn">⛶ Fullscreen</button>
+    </div>
   </div>
-</section>
 
-<section id="portfolio-flipbook" class="container">
-  <h2 style="text-align:center; margin-bottom:20px;">Portfolio Showcase</h2>
-
-  <div id="flipbook-container">
-    <div><img src="assets/portfolio/page1.jpg" alt="Portfolio Page 1"></div>
-    <div><img src="assets/portfolio/page2.jpg" alt="Portfolio Page 2"></div>
-    <div><img src="assets/portfolio/page3.jpg" alt="Portfolio Page 3"></div>
-    <div><img src="assets/portfolio/page4.jpg" alt="Portfolio Page 4"></div>
-    <!-- Add more pages as needed -->
-  </div>
-
-  <div class="flipbook-controls">
-    <button onclick="$('#flipbook-container').turn('previous')">&larr; Previous</button>
-    <button onclick="$('#flipbook-container').turn('next')">Next &rarr;</button>
-    <button id="fullscreen-btn">Full Screen</button>
-  </div>
-</section>
-
-<footer class="site-footer">
-  <div class="container footer-grid">
-    <div>
-      <div class="brand-inline">
-        <img src="assets/img/logo.svg" alt="Pharma Designs Hub logo" width="28" height="28"/>
-        <strong>Pharma Designs Hub</strong>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="brand-inline">
+          <img src="assets/logo.png" alt="Pharma Designs Hub" width="30">
+          <strong>Pharma Designs Hub</strong>
+        </div>
+        <p>Creative pharma branding & packaging solutions.</p>
       </div>
-      <p>Designs that make pharma brands look professional and trustworthy.</p>
-    </div>
-    <div>
-      <h4>Quick Links</h4>
-      <ul>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="pricing.html">Pricing</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>Contact</h4>
-      <ul class="contact-list">
-        <li>Email: <a href="mailto:pharmadesignshub@gmail.com">pharmadesignshub@gmail.com</a></li>
-        <li>Website: <a href="https://pharmadesignshub.com" target="_blank" rel="noopener">pharmadesignshub.com</a></li>
-      </ul>
-      <div class="socials">
-        <a href="#" aria-label="Instagram">Instagram</a>
-        <a href="#" aria-label="LinkedIn">LinkedIn</a>
-        <a href="#" aria-label="Facebook">Facebook</a>
+      <div>
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a><br>
+        <a href="portfolio.html">Portfolio</a><br>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <h4>Follow Us</h4>
+        <div class="socials">
+          <a href="#">Facebook</a>
+          <a href="#">Instagram</a>
+          <a href="#">LinkedIn</a>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="container legal">
-    <small>© <span id="year"></span> Pharma Designs Hub. All rights reserved.</small>
-  </div>
-</footer>
+    <div class="legal">© 2025 Pharma Designs Hub. All rights reserved.</div>
+  </footer>
 
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/4.1.0/turn.min.js"></script>
 
-<!-- Flipbook JS Libraries -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/4.1.0/turn.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      // Initialize flipbook
+      $("#flipbook-container").turn({
+        width: 900,
+        height: 600,
+        autoCenter: true,
+        gradients: true,
+        elevation: 50
+      });
 
-<script>
-  $(document).ready(function () {
-    // Initialize flipbook
-    $("#flipbook-container").turn({
-      width: 900,
-      height: 600,
-      autoCenter: true,
-      gradients: true,
-      elevation: 50
+      // Fullscreen button
+      $("#fullscreen-btn").on("click", function () {
+        let elem = document.getElementById("flipbook-container");
+        if (elem.requestFullscreen) {
+          elem.requestFullscreen();
+        } else if (elem.webkitRequestFullscreen) {
+          elem.webkitRequestFullscreen();
+        } else if (elem.msRequestFullscreen) {
+          elem.msRequestFullscreen();
+        }
+      });
     });
-
-    // Fullscreen button
-    $("#fullscreen-btn").on("click", function () {
-      let elem = document.getElementById("flipbook-container");
-      if (elem.requestFullscreen) {
-        elem.requestFullscreen();
-      } else if (elem.webkitRequestFullscreen) {
-        elem.webkitRequestFullscreen();
-      } else if (elem.msRequestFullscreen) {
-        elem.msRequestFullscreen();
-      }
-    });
-  });
-</script>
+  </script>
 
 </body>
 </html>
