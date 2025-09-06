@@ -89,29 +89,15 @@
 
 <script>
   $(document).ready(function () {
-    // Initialize flipbook
     $("#flipbook-container").turn({
       width: 900,
       height: 600,
       autoCenter: true,
-      gradients: true,
-      elevation: 50,
-      display: 'single'   // 👈 show one page at a time
-    });
-
-    // Fullscreen button
-    $("#fullscreen-btn").on("click", function () {
-      let elem = document.getElementById("flipbook-container");
-      if (elem.requestFullscreen) {
-        elem.requestFullscreen();
-      } else if (elem.webkitRequestFullscreen) {
-        elem.webkitRequestFullscreen();
-      } else if (elem.msRequestFullscreen) {
-        elem.msRequestFullscreen();
-      }
+      display: 'single'   // 👈 single page mode
     });
   });
 </script>
+
 
 
 </body>
