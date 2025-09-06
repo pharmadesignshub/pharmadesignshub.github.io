@@ -5,6 +5,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pharma Designs Hub - Portfolio</title>
   <link rel="stylesheet" href="style.css">
+
+  <!-- Flipbook CSS -->
+  <style>
+    /* Flipbook container */
+    #flipbook-container {
+      width: 900px;
+      height: 600px;
+      margin: 40px auto;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+      background: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Each page */
+    #flipbook-container > div {
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Images inside pages */
+    #flipbook-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Navigation arrows */
+    .flip-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 2rem;
+      background: rgba(0,0,0,0.4);
+      color: #fff;
+      border: none;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      border-radius: 50%;
+      z-index: 100;
+    }
+    .flip-arrow.left { left: -60px; }
+    .flip-arrow.right { right: -60px; }
+  </style>
 </head>
 <body>
 
@@ -12,7 +57,7 @@
   <header class="site-header">
     <div class="container header-inner">
       <a href="index.html" class="brand">
-        <img src="assets/img/logo.png" alt="Pharma Designs Hub" width="40">
+        <img src="assets/logo.png" alt="Pharma Designs Hub" width="40">
         Pharma Designs Hub
       </a>
       <nav class="nav">
@@ -32,35 +77,24 @@
   </section>
 
   <!-- Flipbook -->
-  <div class="container">
+  <div class="container" style="position:relative;">
+    <button class="flip-arrow left" id="prevPage">❮</button>
     <div id="flipbook-container">
       <div><img src="assets/portfolio/page1.jpg" alt="Portfolio Page 1"></div>
       <div><img src="assets/portfolio/page2.jpg" alt="Portfolio Page 2"></div>
       <div><img src="assets/portfolio/page3.jpg" alt="Portfolio Page 3"></div>
       <div><img src="assets/portfolio/page4.jpg" alt="Portfolio Page 4"></div>
-      <!-- keep adding more pages here -->
+      <!-- Add more pages here -->
     </div>
-
-    <!-- Flipbook Controls -->
- <div class="container">
-  <div id="flipbook-container">
-    <div class="page"><img src="assets/portfolio/page1.jpg" alt="Portfolio Page 1"></div>
-    <div class="page"><img src="assets/portfolio/page2.jpg" alt="Portfolio Page 2"></div>
-    <div class="page"><img src="assets/portfolio/page3.jpg" alt="Portfolio Page 3"></div>
-    <div class="page"><img src="assets/portfolio/page4.jpg" alt="Portfolio Page 4"></div>
-
-    <!-- Arrows -->
-    <button class="flip-arrow left" onclick="$('#flipbook-container').turn('previous')">&#10094;</button>
-    <button class="flip-arrow right" onclick="$('#flipbook-container').turn('next')">&#10095;</button>
+    <button class="flip-arrow right" id="nextPage">❯</button>
   </div>
-</div>
 
   <!-- Footer -->
   <footer class="site-footer">
     <div class="container footer-grid">
       <div>
         <div class="brand-inline">
-          <img src="assets/img/logo.png" alt="Pharma Designs Hub" width="30">
+          <img src="assets/logo.png" alt="Pharma Designs Hub" width="30">
           <strong>Pharma Designs Hub</strong>
         </div>
         <p>Creative pharma branding & packaging solutions.</p>
@@ -85,20 +119,27 @@
 
   <!-- Scripts -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/3/turn.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/4.1.0/turn.min.js"></script>
 
-<script>
-  $(document).ready(function () {
-    $("#flipbook-container").turn({
-      width: 900,
-      height: 600,
-      autoCenter: true,
-      display: 'single'   // 👈 single page mode
+  <script>
+    $(document).ready(function () {
+      // Initialize flipbook
+      $("#flipbook-container").turn({
+        width: 900,
+        height: 600,
+        autoCenter: true,
+        display: 'single'   // single page flip
+      });
+
+      // Navigation buttons
+      $("#prevPage").click(function () {
+        $("#flipbook-container").turn("previous");
+      });
+      $("#nextPage").click(function () {
+        $("#flipbook-container").turn("next");
+      });
     });
-  });
-</script>
-
-
+  </script>
 
 </body>
 </html>
