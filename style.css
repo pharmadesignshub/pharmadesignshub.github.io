@@ -107,41 +107,42 @@ body {
 }
 
 /* Each page */
-#flipbook-container > div {
+/* Flipbook container */
+#flipbook-container {
+  width: 900px;
+  height: 600px;
+  margin: 40px auto;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  background: #fff;
+  position: relative;
+}
+
+/* Pages inside flipbook */
+#flipbook-container .page {
   width: 100%;
   height: 100%;
-  position: absolute;   /* stack pages on top of each other */
-  top: 0;
-  left: 0;
 }
+
+/* Images inside pages */
+#flipbook-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;  /* keep full image visible */
+  display: block;
 }
+
+/* Arrows */
 .flip-arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(122,162,255,0.8); /* semi-transparent brand */
-  color: #081226;
+  background: rgba(0,0,0,0.5);
+  color: white;
   border: none;
-  padding: 0.8rem 1.2rem;
-  border-radius: 50%;
-  font-size: 1.5rem;
+  font-size: 2rem;
+  padding: 10px 15px;
   cursor: pointer;
-  z-index: 10;
-  transition: background 0.3s;
+  z-index: 100;
 }
-
-.flip-arrow:hover {
-  background: var(--brand-2);
-}
-
-.flip-arrow.left {
-  left: -60px;  /* adjust distance outside book */
-}
-
-.flip-arrow.right {
-  right: -60px;
-}
-
-#flipbook-container {
-  position: relative; /* so arrows align properly */
-}
+.flip-arrow.left { left: -50px; }
+.flip-arrow.right { right: -50px; }
