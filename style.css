@@ -95,18 +95,15 @@ body {
 }
 
 /* ----------------- Flipbook Styles ----------------- */
-/* Flipbook container */
-/* ----------------- Flipbook Styles ----------------- */
-
-/* Flipbook container */
 #flipbook-container {
-  width: 900px;
-  height: 600px;
+  width: 100%;
+  max-width: 900px;
+  aspect-ratio: 3 / 2;       /* responsive ratio */
   margin: 40px auto;
   box-shadow: 0 4px 20px rgba(0,0,0,0.3);
   background: #fff;
-  position: relative;   /* allows arrows to position inside */
-  overflow: hidden;     /* hides extra images */
+  position: relative;
+  overflow: hidden;
   border-radius: 8px;
 }
 
@@ -120,9 +117,10 @@ body {
 #flipbook-container img {
   width: 100%;
   height: 100%;
-  object-fit: contain;  /* keep aspect ratio */
+  object-fit: contain;
   display: block;
   border-radius: 4px;
+  background: #fff;
 }
 
 /* Arrows */
@@ -137,20 +135,26 @@ body {
   padding: 10px 15px;
   cursor: pointer;
   border-radius: 50%;
-  z-index: 2000;          /* ensures above flipbook */
-  transition: background 0.3s ease, opacity 0.3s ease;
-  opacity: 0;             /* hidden by default */
+  z-index: 2000;
+  transition: all 0.3s ease;
+  opacity: 0; /* hidden by default */
 }
 
-/* Show arrows when user hovers over flipbook */
+/* Show arrows when hovering (desktop) */
 #flipbook-container:hover .flip-arrow {
   opacity: 1;
 }
 
-/* Left/right positioning inside the flipbook */
+/* Left/right positioning */
 .flip-arrow.left { left: 15px; }
 .flip-arrow.right { right: 15px; }
 
 .flip-arrow:hover {
   background: rgba(0,0,0,0.8);
+  transform: translateY(-50%) scale(1.1);
+}
+
+/* On mobile, always show arrows */
+@media (max-width: 768px) {
+  .flip-arrow { opacity: 1; }
 }
