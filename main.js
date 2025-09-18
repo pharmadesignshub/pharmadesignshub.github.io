@@ -2,8 +2,11 @@
   const navToggle = document.getElementById('navToggle');
   const siteNav = document.getElementById('siteNav');
   const year = document.getElementById('year');
+
+  // Set current year in footer
   if (year) year.textContent = new Date().getFullYear();
 
+  // Toggle nav menu
   if (navToggle && siteNav){
     navToggle.addEventListener('click', () => {
       const isOpen = siteNav.classList.toggle('open');
@@ -11,7 +14,7 @@
     });
   }
 
-  // Close nav on link click (mobile)
+  // Close nav when a link is clicked (mobile)
   if (siteNav){
     siteNav.querySelectorAll('a').forEach(a => {
       a.addEventListener('click', () => {
